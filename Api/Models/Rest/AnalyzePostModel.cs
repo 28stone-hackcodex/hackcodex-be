@@ -11,7 +11,7 @@
         public int FamilySalary { get; set; }
 
         public Location ResidentalLocation { get; set; }
-        public Dictionary<Guid, decimal> SchoolMarksBySchoolSubjectId { get; set; }
+        public List<Tuple<Guid, decimal>> SchoolMarksBySchoolSubjectId { get; set; }
         public List<Guid> InterestFieldsIds { get; set; }
     }
 }
