@@ -14,6 +14,8 @@ namespace Api.Controllers
         {
             _evaluationService = evaluationService;
         }
+
+        [HttpPost]
         public EvaluationResult EvaluateEducationChoices(AnalyzePostModel analyzePostModel)
         {
             return _evaluationService.EvaluateEducationChoices(analyzePostModel);
