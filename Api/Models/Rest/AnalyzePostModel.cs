@@ -8,7 +8,6 @@
         public int MaxCount { get; set; }
 
         public int AvailiableBudget { get; set; }
-        public int FamilySalary { get; set; }
 
         public Location ResidentalLocation { get; set; }
         public List<Tuple<Guid, decimal>> SchoolMarksBySchoolSubjectId { get; set; }
