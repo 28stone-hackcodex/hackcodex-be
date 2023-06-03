@@ -8,10 +8,10 @@
         public List<InterestArea> InterestAreas { get; set; }
         public List<SchoolSubject> SchoolSubjects { get; set; }
 
-        public List<University> Universities { get; set; }
-        public List<UniversityProgram> UniversityPrograms { get; set; }
+        public List<HighSchool> HighSchools { get; set; }
+        public List<HighSchoolProgram> HighSchoolPrograms { get; set; }
 
-        public List<Weight> UniversityProgramsSchoolSubjectWeights { get; set; }
-        public List<Weight> UniversityProgramsInterestAreaWeights { get; set; }
+        public List<Weight> HighSchoolProgramsSchoolSubjectWeights { get; set; }
+        public List<Weight> HighSchoolProgramsInterestAreaWeights { get; set; }
     }
 }
