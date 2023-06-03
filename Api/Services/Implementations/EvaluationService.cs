@@ -1,6 +1,7 @@
 ﻿using Api.Models.Rest;
+using Api.Services.Interfaces;
 
-namespace Api.Services
+namespace Api.Services.Implementations
 {
     public class EvaluationService : IEvaluationService
     {

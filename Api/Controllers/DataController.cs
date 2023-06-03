@@ -1,6 +1,6 @@
 ﻿using Api.Models;
+using Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace Api.Controllers
 {
@@ -8,16 +8,18 @@ namespace Api.Controllers
     [Route("data")]
     public class DataController : ControllerBase
     {
+        private readonly IDataProvider _dataProvider;
+
+        public DataController(IDataProvider dataProvider)
+        {
+            _dataProvider = dataProvider;
+        }
+
         [HttpGet]
         [Route("all")]
         public JsonDbContext GetAllData()
         {
-            using (StreamReader reader = new("data/jsonDbContext.json"))
-            {
-                var json = reader.ReadToEnd();
-                return JsonConvert.DeserializeObject<JsonDbContext>(json);
-            }
+            return _dataProvider.GetData();
         }
-
     }
 }

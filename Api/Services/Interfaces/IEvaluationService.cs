@@ -1,6 +1,6 @@
 ﻿using Api.Models.Rest;
 
-namespace Api.Services
+namespace Api.Services.Interfaces
 {
     public interface IEvaluationService
     {

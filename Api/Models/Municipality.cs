@@ -1,6 +1,6 @@
 ﻿namespace Api.Models
 {
-    public class City
+    public class Municipality
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

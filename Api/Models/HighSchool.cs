@@ -2,11 +2,11 @@
 {
     public class HighSchool
     {
-        public Guid Id { get; set; }
+        public string RegistrationNumber { get; set; } // ID
+        public string NameOfInstitution { get; set; }
+
+        public string Municipality { get; set; } // TODO: get rid of it
         public Guid LocationId { get; set; }
         public List<Guid> HighSchoolProgramIds { get; set; }
-
-        public int DormitoryMonthlyCost { get; set; }
-        public decimal MinAvgWeightedGrade { get; set; }
     }
 }

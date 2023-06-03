@@ -1,5 +1,5 @@
 ﻿using Api.Models.Rest;
-using Api.Services;
+using Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers

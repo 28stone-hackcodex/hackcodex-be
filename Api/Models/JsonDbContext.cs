@@ -1,8 +1,10 @@
-﻿namespace Api.Models
+﻿using System.Text.Json.Serialization;
+
+namespace Api.Models
 {
     public class JsonDbContext
     {
-        public List<City> Cities { get; set; }
+        public List<Municipality> Municipalities { get; set; }
         public List<Location> Locations { get; set; }
 
         public List<InterestArea> InterestAreas { get; set; }

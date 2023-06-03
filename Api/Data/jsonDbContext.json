@@ -1,12 +1,19 @@
 {
-  "cities": [
+  "municipalities": [
     {
       "id": "4c5f4c87-f904-440c-897e-bc2cef8d393d",
-      "name": "Riga"
+      "name": "Rīga"
     },
     {
       "id": "64d9f6af-ae46-4563-a4e9-5f80474962b5",
       "name": "Daugavpils"
+    }
+  ],
+  "locations": [
+    {
+      "id": "f96d4cee-8c53-466d-9441-f38b654fc4b3",
+      "municipalityId": "4c5f4c87-f904-440c-897e-bc2cef8d393d",
+      "address": "Random address"
     }
   ]
 }
