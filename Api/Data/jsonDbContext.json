@@ -15,5 +15,56 @@
       "municipalityId": "4c5f4c87-f904-440c-897e-bc2cef8d393d",
       "address": "Random address"
     }
+  ],
+  "interestAreas": [
+    {
+      "id": "53b789b7-a767-4341-a5ff-15fee8372d7e",
+      "name": "Playing music instrument"
+    }
+  ],
+  "schoolSubjects": [
+    {
+      "id": "b296f20b-8fff-4158-a09a-25a2c7f091bb",
+      "name": "Maths"
+    },
+    {
+      "id": "c678f20b-8fff-4158-a09a-25a2c7f091bb",
+      "name": "Biology"
+    }
+  ],
+  "highSchoolPrograms": [
+    {
+      "id": "b296f20b-8fff-4158-a09a-25a2c7f091bb",
+      "name": "Computer science"
+    }
+  ],
+  "HighSchoolsHighSchoolPrograms": [
+    {
+      "id1": "3334002984",
+      "id2": "b296f20b-8fff-4158-a09a-25a2c7f091bb"
+    },
+    {
+      "id1": "3334000016",
+      "id2": "b296f20b-8fff-4158-a09a-25a2c7f091bb"
+    }
+  ],
+  "highSchoolProgramsSchoolSubjectWeights": [
+    {
+      "id1": "b296f20b-8fff-4158-a09a-25a2c7f091bb",
+      "id2": "b296f20b-8fff-4158-a09a-25a2c7f091bb",
+      "value": 1
+    },
+    {
+      "id1": "b296f20b-8fff-4158-a09a-25a2c7f091bb",
+      "id2": "c678f20b-8fff-4158-a09a-25a2c7f091bb",
+      "value": 0.78
+    }
+  ],
+  "highSchoolProgramsInterestAreaWeights": [
+    {
+      "id1": "b296f20b-8fff-4158-a09a-25a2c7f091bb",
+      "id2": "53b789b7-a767-4341-a5ff-15fee8372d7e",
+      "value": 0.67
+    }
   ]
 }
