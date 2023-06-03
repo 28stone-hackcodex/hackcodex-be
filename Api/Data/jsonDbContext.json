@@ -1,0 +1,12 @@
+{
+  "cities": [
+    {
+      "id": "4c5f4c87-f904-440c-897e-bc2cef8d393d",
+      "name": "Riga"
+    },
+    {
+      "id": "64d9f6af-ae46-4563-a4e9-5f80474962b5",
+      "name": "Daugavpils"
+    }
+  ]
+}

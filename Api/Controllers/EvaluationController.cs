@@ -21,5 +21,6 @@ namespace Api.Controllers
         {
             return _evaluationService.EvaluateEducationChoices(analyzePostModel);
         }
+
     }
 }
