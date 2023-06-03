@@ -16,6 +16,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
+        [Route("education-choices")]
         public EvaluationResult EvaluateEducationChoices(AnalyzePostModel analyzePostModel)
         {
             return _evaluationService.EvaluateEducationChoices(analyzePostModel);
