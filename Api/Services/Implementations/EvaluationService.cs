@@ -71,7 +71,7 @@ namespace Api.Services.Implementations
                 foreach (var hshsp in data.HighSchoolsHighSchoolPrograms.Where(x => x.Id2 == hsp.Id)) // TODO: Define which university is better, fulfill algoritm for this
                 {
                     var highSchoolObj = data.HighSchools.FirstOrDefault(x => x.RegistrationNumber == hshsp.Id1); // TODO: modify data to be able to use "First()"
-                    var municipalityId = data.Locations.FirstOrDefault(x => x.Id == highSchoolObj.LocationId).MunicipalityId;
+                    var municipalityId = data.Locations.FirstOrDefault(x => x.Id == highSchoolObj.LocationId)?.MunicipalityId;
                     var extraPoints = (analyzePostModel.ResidentalLocation.MunicipalityId == municipalityId ? 1 : 0) * SAME_MUNICIPALITY_ADDITIONAL_POINTS;
                     
                     analyzeResults.Add(new EvaluationResult
