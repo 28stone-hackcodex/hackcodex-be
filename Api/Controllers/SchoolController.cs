@@ -9,12 +9,13 @@ namespace Api.Controllers
     [Route("/schools")]
     public class SchoolController
     {
-        
+        private readonly ILogger<SchoolController> _logger;
         private readonly IDataProvider _dataProvider;
 
-        public SchoolController(IDataProvider dataProvider)
+        public SchoolController(IDataProvider dataProvider, ILogger<SchoolController> logger)
         {
             _dataProvider = dataProvider;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -29,6 +30,14 @@ namespace Api.Controllers
             }
 
             return singleSchoolViews;
+        }
+
+        [HttpGet]
+        [Route("/{id:int}")]
+        public SingleSchoolView GetSchool(int id)
+        {
+            var list = _dataProvider.GetHighSchools();
+            return MapperHelper.Map(id, list[id]);
         }
     }
 }
