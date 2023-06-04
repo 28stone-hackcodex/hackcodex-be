@@ -5,7 +5,7 @@
     /// </summary>
     public class AnalyzePostModel
     {
-        public int MaxCount { get; set; }
+        public int MaxCount { get; set; } = 10; // Default value
 
         public int AvailiableBudget { get; set; }
 
