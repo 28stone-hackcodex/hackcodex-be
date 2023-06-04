@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("default", policy =>
     {
-        policy.WithOrigins("http://localhost:5173/", "https://hackcodex-fe-b26y.vercel.app/")
+        policy.WithOrigins("https://localhost:5173", "http://localhost:5173/", "https://hackcodex-fe-b26y.vercel.app/")
             .AllowAnyHeader()
             .AllowAnyOrigin()
             .AllowAnyMethod();
