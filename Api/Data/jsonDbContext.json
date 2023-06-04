@@ -44,12 +44,34 @@
     { "id": "ccc09aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Classic piano" }
   ],
   "HighSchoolsHighSchoolPrograms": [
-    { "id1": "3334002984", "id2": "ccc01aaa-8fff-4158-a09a-ccccccccccee" },
-    { "id1": "3334000016", "id2": "ccc01aaa-8fff-4158-a09a-ccccccccccee" }
+    // Rīgas Tehniskā koledža
+    { "id1": "3397002057", "id2": "ccc01aaa-8fff-4158-a09a-ccccccccccee" }, // Computer science
+    { "id1": "3397002057", "id2": "ccc04aaa-8fff-4158-a09a-25a2c7f091bb" }, // Cartography
+    // Latvijas Jūras akadēmijas Jūrskola
+    { "id1": "3331002482", "id2": "ccc02aaa-8fff-4158-a09a-25a2c7f091bb" }, // Physiotherapy
+    { "id1": "3331002482", "id2": "ccc06aaa-8fff-4158-a09a-25a2c7f091bb" }, // Translator
+    // Rīgas Tūrisma un radošās industrijas tehnikums
+    { "id1": "3334002984", "id2": "ccc04aaa-8fff-4158-a09a-25a2c7f091bb" }, // Cartography
+    { "id1": "3334002984", "id2": "ccc06aaa-8fff-4158-a09a-25a2c7f091bb" }, // Translator
+    { "id1": "3334002984", "id2": "ccc09aaa-8fff-4158-a09a-25a2c7f091bb" }, // Piano
+    // Rīgas Valsts tehnikums
+    { "id1": "3334000016", "id2": "ccc01aaa-8fff-4158-a09a-ccccccccccee" }, // Computer science
+    { "id1": "3334000016", "id2": "ccc05aaa-8fff-4158-a09a-25a2c7f091bb" }, // Pharmacy
+    { "id1": "3334000016", "id2": "ccc06aaa-8fff-4158-a09a-25a2c7f091bb" }, // Translator
+    { "id1": "3334000016", "id2": "ccc08aaa-8fff-4158-a09a-25a2c7f091bb" }, // Botanics
   ],
   "highSchoolProgramsSchoolSubjectWeights": [
-    { "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee", "id2": "ce01f20b-8fff-4158-a09a-25a2c7f091bb", "value": 1 },
-    { "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee", "id2": "c678f20b-8fff-4158-a09a-25a2c7f091bb", "value": 0.78 }
+    // DD
+    {
+      "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee",
+      "id2": "ce01f20b-8fff-4158-a09a-25a2c7f091bb",
+      "value": 1
+    },
+    {
+      "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee",
+      "id2": "c678f20b-8fff-4158-a09a-25a2c7f091bb",
+      "value": 0.78
+    }
   ],
   "highSchoolProgramsInterestAreaWeights": [
     { "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee", "id2": "ae0189b7-a767-4341-a5ff-15fee8372d7e", "value": 0.67 }
