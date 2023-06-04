@@ -25,7 +25,7 @@ namespace Api.Services.Helpers
                 City = from.Municipality,
                 TotalNumberOfStudents = from.TotalNumberOfStudents,
                 ImageUrl =
-                    schoolImageUrls[Faker.RandomNumber.Next(schoolImageUrls.Capacity)],
+                    schoolImageUrls[Faker.RandomNumber.Next(schoolImageUrls.Count-1)],
                 Description =
                     $@"Welcome to {from.NameOfInstitution}, a vibrant and inclusive educational institution nestled in the heart of a bustling suburban town. With a rich history spanning over six decades, {from.NameOfInstitution} has established itself as a beacon of academic excellence, fostering a nurturing environment where students can thrive and reach their full potential.
 
