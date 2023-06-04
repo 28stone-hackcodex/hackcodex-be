@@ -1,7 +1,9 @@
 using Api.Services.Implementations;
 using Api.Services.Interfaces;
 using Api.Services.Store;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.Extensions.FileProviders;
+using System.ComponentModel.DataAnnotations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +35,33 @@ builder.Services.AddCors(options =>
 //
 
 var app = builder.Build();
+
+
+
+app.UseExceptionHandler(app =>
+{
+    app.Run(async context =>
+    {
+        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+        context.Response.ContentType = "text/plain";
+
+        var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();
+        if (exceptionHandlerFeature?.Error != null)
+        {
+            string errorMessage = "An unexpected error occurred.";
+
+            // Customize the error message based on the exception type if needed
+            if (exceptionHandlerFeature.Error is ValidationException)
+            {
+                errorMessage = $"A specific error occurred. {exceptionHandlerFeature.Error.Message}";
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            }
+
+            await context.Response.WriteAsync(errorMessage);
+        }
+    });
+});
+
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
