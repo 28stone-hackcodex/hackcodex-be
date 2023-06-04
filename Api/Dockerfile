@@ -13,4 +13,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /App
 COPY --from=build-env /App/out .
 COPY --from=build-env /App/Data /App/data
+COPY --from=build-env /App/Data /Data
 ENTRYPOINT ["dotnet", "Api.dll"]

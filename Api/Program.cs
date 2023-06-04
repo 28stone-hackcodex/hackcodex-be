@@ -1,6 +1,7 @@
 using Api.Services.Implementations;
 using Api.Services.Interfaces;
 using Api.Services.Store;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +23,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("default", policy =>
     {
-        policy.WithOrigins("http://localhost:5173/", "https://hackcodex-fe-b26y.vercel.app/")
+        policy.WithOrigins("https://localhost:5173", "http://localhost:5173/", "https://hackcodex-fe-b26y.vercel.app/")
             .AllowAnyHeader()
             .AllowAnyOrigin()
             .AllowAnyMethod();
@@ -41,6 +42,12 @@ app.UseCors("default");
 
 app.UseResponseCaching(); // Please note: must be after UserCors()
 app.UseHttpsRedirection();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "Data")),
+    RequestPath = "/static"
+});
 
 app.UseAuthorization();
 app.MapControllers();
