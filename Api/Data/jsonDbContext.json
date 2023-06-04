@@ -1,30 +1,57 @@
 {
   "municipalities": [
-    { "id": "4c5f4c87-f904-440c-897e-bc2cef8d393d", "name": "Rīga" },
-    { "id": "64d9f6af-ae46-4563-a4e9-5f80474962b5", "name": "Daugavpils" }
+    { "id": "ca01ac87-f904-440c-897e-bc2cef8d393d", "name": "Rīga" },
+    { "id": "ca02f6af-ae46-4563-a4e9-5f80474962b5", "name": "Daugavpils" },
+    { "id": "ca03f6af-ae46-4563-a4e9-5f80474962b5", "name": "Ventspils" },
+    { "id": "ca04f6af-ae46-4563-a4e9-5f80474962b5", "name": "Jelgava" }
   ],
   "locations": [
-    { "id": "f96d4cee-8c53-466d-9441-f38b654fc4b3", "municipalityId": "4c5f4c87-f904-440c-897e-bc2cef8d393d", "address": "Random address" }
+    { "id": "ff014cee-8c53-466d-9441-f38b654fc4b3", "municipalityId": "ca01ac87-f904-440c-897e-bc2cef8d393d", "address": "Rigas 1" },
+    { "id": "ff024cee-8c53-466d-9441-f38b654fc4b3", "municipalityId": "ca01ac87-f904-440c-897e-bc2cef8d393d", "address": "Rigas 2" },
+    { "id": "ff034cee-8c53-466d-9441-f38b654fc4b3", "municipalityId": "ca02f6af-ae46-4563-a4e9-5f80474962b5", "address": "Daugavpils iela 2" },
+    { "id": "ff044cee-8c53-466d-9441-f38b654fc4b3", "municipalityId": "ca03f6af-ae46-4563-a4e9-5f80474962b5", "address": "Ventspils 42" },
+    { "id": "ff054cee-8c53-466d-9441-f38b654fc4b3", "municipalityId": "ca04f6af-ae46-4563-a4e9-5f80474962b5", "address": "Jelgavas 2" }
   ],
   "interestAreas": [
-    { "id": "53b789b7-a767-4341-a5ff-15fee8372d7e", "name": "Playing music instrument" }
+    { "id": "ae0189b7-a767-4341-a5ff-15fee8372d7e", "name": "Playing music instrument" },
+    { "id": "ae0289b7-a767-4341-a5ff-15fee8372d7e", "name": "Chess" },
+    { "id": "ae0389b7-a767-4341-a5ff-15fee8372d7e", "name": "Photography" },
+    { "id": "ae0489b7-a767-4341-a5ff-15fee8372d7e", "name": "Painting" },
+    { "id": "ae0589b7-a767-4341-a5ff-15fee8372d7e", "name": "Orienteering" },
+    { "id": "ae0689b7-a767-4341-a5ff-15fee8372d7e", "name": "Computers" },
   ],
   "schoolSubjects": [
-    { "id": "b296f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Maths" },
-    { "id": "c678f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Biology" }
+    { "id": "ce01f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Maths" },
+    { "id": "ce02f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Biology" },
+    { "id": "ce03f20b-8fff-4158-a09a-25a2c7f091bb", "name": "History" },
+    { "id": "ce04f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Geography" },
+    { "id": "ce05f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Foreign language" },
+    { "id": "ce06f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Informatics" },
+    { "id": "ce07f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Physics" },
+    { "id": "ce08f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Chemistry" },
+    { "id": "ce09f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Visual arts" },
+    { "id": "ce10f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Music" }
   ],
   "highSchoolPrograms": [
-    { "id": "b296f20b-8fff-4158-a09a-25a2c7f091bb", "name": "Computer science" }
+    { "id": "ccc01aaa-8fff-4158-a09a-ccccccccccee", "name": "Computer science" },
+    { "id": "ccc02aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Physiotherapy" },
+    { "id": "ccc03aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Teacher" },
+    { "id": "ccc04aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Cartography" },
+    { "id": "ccc05aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Pharmacy" },
+    { "id": "ccc06aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Translator" },
+    { "id": "ccc07aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Archeology" },
+    { "id": "ccc08aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Botanics" },
+    { "id": "ccc09aaa-8fff-4158-a09a-25a2c7f091bb", "name": "Classic piano" }
   ],
   "HighSchoolsHighSchoolPrograms": [
-    { "id1": "3334002984", "id2": "b296f20b-8fff-4158-a09a-25a2c7f091bb" },
-    { "id1": "3334000016", "id2": "b296f20b-8fff-4158-a09a-25a2c7f091bb" }
+    { "id1": "3334002984", "id2": "ccc01aaa-8fff-4158-a09a-ccccccccccee" },
+    { "id1": "3334000016", "id2": "ccc01aaa-8fff-4158-a09a-ccccccccccee" }
   ],
   "highSchoolProgramsSchoolSubjectWeights": [
-    { "id1": "b296f20b-8fff-4158-a09a-25a2c7f091bb", "id2": "b296f20b-8fff-4158-a09a-25a2c7f091bb", "value": 1 }, // 
-    { "id1": "b296f20b-8fff-4158-a09a-25a2c7f091bb", "id2": "c678f20b-8fff-4158-a09a-25a2c7f091bb", "value": 0.78 }
+    { "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee", "id2": "ce01f20b-8fff-4158-a09a-25a2c7f091bb", "value": 1 },
+    { "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee", "id2": "c678f20b-8fff-4158-a09a-25a2c7f091bb", "value": 0.78 }
   ],
   "highSchoolProgramsInterestAreaWeights": [
-    { "id1": "b296f20b-8fff-4158-a09a-25a2c7f091bb", "id2": "53b789b7-a767-4341-a5ff-15fee8372d7e", "value": 0.67 }
+    { "id1": "ccc01aaa-8fff-4158-a09a-ccccccccccee", "id2": "ae0189b7-a767-4341-a5ff-15fee8372d7e", "value": 0.67 }
   ]
 }
