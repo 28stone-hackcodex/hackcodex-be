@@ -1,5 +1,5 @@
 ﻿using Api.Models;
-using Api.Services.Interfaces;
+using Api.Services.Store;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -9,18 +9,18 @@ namespace Api.Controllers
     [ResponseCache(Duration = 64000)]
     public class DataController : ControllerBase
     {
-        private readonly IDataProvider _dataProvider;
+        private readonly DataStore _dataStore;
 
-        public DataController(IDataProvider dataProvider)
+        public DataController(DataStore dataStore)
         {
-            _dataProvider = dataProvider;
+            _dataStore = dataStore;
         }
 
         [HttpGet]
         [Route("all")]
         public JsonDbContext GetAllData()
         {
-            return _dataProvider.GetData();
+            return _dataStore.GetAllData();
         }
     }
 }

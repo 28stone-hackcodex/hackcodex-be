@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen();
 // Registrations
 builder.Services.AddScoped<IEvaluationService, EvaluationService>();
 builder.Services.AddScoped<IDataProvider, DataProvider>();
-builder.Services.AddScoped<SchoolStore>();
+builder.Services.AddScoped<DataStore>();
 
 
 builder.Services.AddCors(options =>

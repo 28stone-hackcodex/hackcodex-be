@@ -9,9 +9,9 @@ namespace Api.Controllers
     [ResponseCache(Duration = 64000)]
     public class SchoolController
     {
-        private readonly SchoolStore _schoolStore;
+        private readonly DataStore _schoolStore;
 
-        public SchoolController(SchoolStore schoolStore)
+        public SchoolController(DataStore schoolStore)
         {
             _schoolStore = schoolStore;
         }
