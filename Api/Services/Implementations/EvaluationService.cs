@@ -18,6 +18,8 @@ namespace Api.Services.Implementations
         }
         private void ValidateAnalyzePostModel(AnalyzePostModel analyzePostModel, JsonDbContext data)
         {
+            if (analyzePostModel.MaxCount <= 0) analyzePostModel.MaxCount = 10; // TODO: move to config sometime, now ok to leave here as it is prototype project
+
             if (!data.Municipalities.Any(x => x.Id == analyzePostModel.ResidentalLocation.MunicipalityId))
             {
                 throw new ValidationException($"Please add registered municipality ID, custom not implemented yet. Not found ID: {analyzePostModel.ResidentalLocation.MunicipalityId}");
