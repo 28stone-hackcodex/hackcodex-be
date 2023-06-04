@@ -1,6 +1,8 @@
-﻿using Api.Models.Rest;
+﻿using Api.Models;
+using Api.Models.Rest;
 using Api.Services.Interfaces;
 using Api.Services.Store;
+using System.ComponentModel.DataAnnotations;
 
 namespace Api.Services.Implementations
 {
@@ -14,9 +16,32 @@ namespace Api.Services.Implementations
         {
             _dataStore = dataStore;
         }
+        private void ValidateAnalyzePostModel(AnalyzePostModel analyzePostModel, JsonDbContext data)
+        {
+            if (!data.Municipalities.Any(x => x.Id == analyzePostModel.ResidentalLocation.MunicipalityId))
+            {
+                throw new ValidationException($"Please add registered municipality ID, custom not implemented yet. Not found ID: {analyzePostModel.ResidentalLocation.MunicipalityId}");
+            }
+            foreach (var fld in analyzePostModel.InterestFieldsIds)
+            {
+                if (!data.InterestAreas.Any(x => x.Id == fld))
+                {
+                    throw new ValidationException($"Interest field with Id {fld} not exists");
+                }
+            }
+            foreach (var sm in analyzePostModel.SchoolMarksBySchoolSubjectId)
+            {
+                if (!data.SchoolSubjects.Any(x => x.Id == sm.Item1) || sm.Item2 > 10 || sm.Item2 < 0)
+                {
+                    throw new ValidationException($"School subject not exists or the value incorrect. id: {sm.Item1}, value: {sm.Item2}");
+                }
+            }
+        }
         public List<EvaluationResult> EvaluateEducationChoices(AnalyzePostModel analyzePostModel) // TODO: Refactor
         {
             var data = _dataStore.GetAllData();
+            ValidateAnalyzePostModel(analyzePostModel, data);
+
             var analyzeResults = new List<EvaluationResult>();
 
             foreach (var hsp in data.HighSchoolPrograms)
