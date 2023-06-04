@@ -10,12 +10,9 @@ public class SchoolStore
 
     public SchoolStore(IDataProvider dataProvider)
     {
-        var list = dataProvider.GetHighSchools();
-        for (var index = 0; index < list.Count; index++)
-        {
-            var item = list[index];
-            _singleSchoolViews.Add(MapperHelper.Map(index, item));
-        }
+        _singleSchoolViews = dataProvider.GetHighSchools()
+            .Select((highSchool, i) => MapperHelper.Map(i, highSchool))
+            .ToList();
     }
 
     public List<SingleSchoolView> GetSchools()
