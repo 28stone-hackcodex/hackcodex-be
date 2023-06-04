@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "schoolName": "Rīgas 72. vidusskola",
+  "imageUrl": "...",
+  "description": "Lorem ipsum",
+  "contactPerson": {
+    "fullName": "John Doe",
+    "phone": "+37120000000",
+    "imageUrl": "..."
+  },
+  "reviews": [
+    {
+      "fullName": "Jessica Smith",
+      "timestamp": 1685800637,
+      "text": "Lorem ipsum"
+    }
+  ]
+}
