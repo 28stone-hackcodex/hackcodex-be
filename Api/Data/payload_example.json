@@ -1,0 +1,18 @@
+{
+  "maxCount": 5,
+  "availiableBudget": 0,
+  "residentalLocation": {
+    "id": "ff014cee-8c53-466d-9441-f38b654fc4b3",
+    "municipalityId": "ca01ac87-f904-440c-897e-bc2cef8d393d",
+    "address": "Rigas 1"
+  },
+  "schoolMarksBySchoolSubjectId": [
+    {
+      "item1": "ce01f20b-8fff-4158-a09a-25a2c7f091bb",
+      "item2": 7
+    }
+  ],
+  "interestFieldsIds": [
+    "ae0189b7-a767-4341-a5ff-15fee8372d7e"
+  ]
+}
