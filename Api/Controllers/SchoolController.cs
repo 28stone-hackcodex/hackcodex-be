@@ -6,7 +6,6 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("/schools")]
-    [ResponseCache(Duration = 64000)]
     public class SchoolController
     {
         private readonly DataStore _schoolStore;
