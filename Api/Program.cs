@@ -1,5 +1,6 @@
 using Api.Services.Implementations;
 using Api.Services.Interfaces;
+using Api.Services.Store;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 // Registrations
 builder.Services.AddScoped<IEvaluationService, EvaluationService>();
 builder.Services.AddScoped<IDataProvider, DataProvider>();
+builder.Services.AddScoped<SchoolStore>();
 
 
 builder.Services.AddCors(options =>

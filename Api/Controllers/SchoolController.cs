@@ -1,6 +1,6 @@
 using Api.Models;
 using Api.Services.Helpers;
-using Api.Services.Interfaces;
+using Api.Services.Store;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -9,35 +9,26 @@ namespace Api.Controllers
     [Route("/schools")]
     public class SchoolController
     {
-        private readonly ILogger<SchoolController> _logger;
-        private readonly IDataProvider _dataProvider;
+        private readonly SchoolStore _schoolStore;
 
-        public SchoolController(IDataProvider dataProvider, ILogger<SchoolController> logger)
+        public SchoolController(SchoolStore schoolStore)
         {
-            _dataProvider = dataProvider;
-            _logger = logger;
+            _schoolStore = schoolStore;
         }
 
         [HttpGet]
+        [ResponseCache(Duration = 64000)]
         public List<SingleSchoolView> GetSchools()
         {
-            var singleSchoolViews = new List<SingleSchoolView>();
-            var list = _dataProvider.GetHighSchools();
-            for (var index = 0; index < list.Count; index++)
-            {
-                var item = list[index];
-                singleSchoolViews.Add(MapperHelper.Map(index, item));
-            }
-
-            return singleSchoolViews;
+            return _schoolStore.GetSchools();
         }
 
         [HttpGet]
         [Route("/schools/{id:int}")]
+        [ResponseCache(Duration = 64000)]
         public SingleSchoolView GetSchool(int id)
         {
-            var list = _dataProvider.GetHighSchools();
-            return MapperHelper.Map(id, list[id]);
+            return _schoolStore.GetSchools()[id];
         }
     }
 }
