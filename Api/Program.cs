@@ -15,6 +15,16 @@ builder.Services.AddScoped<IEvaluationService, EvaluationService>();
 builder.Services.AddScoped<IDataProvider, DataProvider>();
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("default", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173/", "https://hackcodex-fe-b26y.vercel.app/")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 //
 
 var app = builder.Build();
@@ -22,6 +32,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseCors("default");
 
 app.UseHttpsRedirection();
 
