@@ -33,7 +33,7 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        [Route("/{id:int}")]
+        [Route("/schools/{id:int}")]
         public SingleSchoolView GetSchool(int id)
         {
             var list = _dataProvider.GetHighSchools();
