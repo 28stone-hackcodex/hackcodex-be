@@ -12,10 +12,30 @@ namespace Api.Services.Implementations
         {
             _dataStore = dataStore;
         }
-        public EvaluationResult EvaluateEducationChoices(AnalyzePostModel analyzePostModel)
+        public List<EvaluationResult> EvaluateEducationChoices(AnalyzePostModel analyzePostModel)
         {
             var data = _dataStore.GetAllData();
-            throw new NotImplementedException();
+            var analyzeResults = new List<EvaluationResult>();
+
+            foreach (var hsp in data.HighSchoolPrograms)
+            {
+                var points = 0;
+
+                foreach (var subjectWeight in data.HighSchoolProgramsSchoolSubjectWeights.Where(x => x.Id1 == hsp.Id))
+                {
+                }
+                foreach (var interestWeight in data.HighSchoolProgramsInterestAreaWeights.Where(x => x.Id1 == hsp.Id))
+                {
+                }
+                foreach (var hs in data.HighSchoolsHighSchoolPrograms.Where(x => x.Id2 == hsp.Id))
+                {
+                }
+            }
+
+            return analyzeResults
+                    .OrderByDescending(x => x.Points)
+                    .Take(analyzePostModel.MaxCount)
+                    .ToList();
         }
     }
 }
