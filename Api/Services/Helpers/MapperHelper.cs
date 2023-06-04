@@ -13,7 +13,19 @@ namespace Api.Services.Helpers
             "https://i.ibb.co/GtLKw4B/4.jpg",
             "https://i.ibb.co/16xGK7w/5.jpg",
             "https://i.ibb.co/7j8BDfY/6.jpg",
-            "https://i.ibb.co/BPf4YhG/7.jpg"
+            "https://i.ibb.co/BPf4YhG/7.jpg",
+            "https://i.ibb.co/PjsW1zc/8.jpg",
+            "https://i.ibb.co/hC0P7KD/9.jpg",
+            "https://i.ibb.co/cYCsTY0/10.jpg",
+            "https://i.ibb.co/K0mrBd3/11.jpg",
+            "https://i.ibb.co/TMGs4f5/12.jpg",
+            "https://i.ibb.co/2hJbM5Q/13.jpg",
+            "https://i.ibb.co/NmLRgBq/14.jpg",
+            "https://i.ibb.co/tpk1HJg/15.jpg",
+            "https://i.ibb.co/sw4G0vn/16.jpg",
+            "https://i.ibb.co/sH1ZN8b/17.jpg",
+            "https://i.ibb.co/nCMYRsp/18.jpg",
+            "https://i.ibb.co/8nkZCXv/19.jpg"
         };
 
         public static SingleSchoolView Map(int index, HighSchool from)
@@ -25,7 +37,7 @@ namespace Api.Services.Helpers
                 City = from.Municipality,
                 TotalNumberOfStudents = from.TotalNumberOfStudents,
                 ImageUrl =
-                    schoolImageUrls[Faker.RandomNumber.Next(schoolImageUrls.Count-1)],
+                    schoolImageUrls[Faker.RandomNumber.Next(schoolImageUrls.Count - 1)],
                 Description =
                     $@"Welcome to {from.NameOfInstitution}, a vibrant and inclusive educational institution nestled in the heart of a bustling suburban town. With a rich history spanning over six decades, {from.NameOfInstitution} has established itself as a beacon of academic excellence, fostering a nurturing environment where students can thrive and reach their full potential.
 
