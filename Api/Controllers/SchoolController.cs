@@ -1,5 +1,4 @@
 using Api.Models;
-using Api.Services.Helpers;
 using Api.Services.Store;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +6,7 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("/schools")]
+    [ResponseCache(Duration = 64000)]
     public class SchoolController
     {
         private readonly SchoolStore _schoolStore;
@@ -17,7 +17,6 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        [ResponseCache(Duration = 64000)]
         public List<SingleSchoolView> GetSchools()
         {
             return _schoolStore.GetSchools();
@@ -25,7 +24,6 @@ namespace Api.Controllers
 
         [HttpGet]
         [Route("/schools/{id:int}")]
-        [ResponseCache(Duration = 64000)]
         public SingleSchoolView GetSchool(int id)
         {
             return _schoolStore.GetSchools()[id];

@@ -6,6 +6,7 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("data")]
+    [ResponseCache(Duration = 64000)]
     public class DataController : ControllerBase
     {
         private readonly IDataProvider _dataProvider;
