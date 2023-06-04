@@ -45,7 +45,7 @@ As you step onto the meticulously manicured campus, you'll be greeted by the sig
                 ContactPerson = new ContactPerson()
                 {
                     FullName = Faker.Name.FullName(NameFormats.Standard),
-                    Phone = "+371" + Faker.RandomNumber.Next(20000000, 29999999).ToString(),
+                    Phone = "+371 " + Faker.RandomNumber.Next(20000000, 29999999).ToString(),
                     ImageUrl = "https://www.seekpng.com/png/full/110-1100707_person-avatar-placeholder.png"
                 }
             };
